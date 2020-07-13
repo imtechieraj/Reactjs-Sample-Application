@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 const NavMenu = (props) => {
+    console.log("i am menu")
     const { NavLink, NavbarBrand } = props.navMenuData;
     return (
         <div>
@@ -24,4 +25,4 @@ const NavMenu = (props) => {
     )
 }
 
-export default NavMenu;
+export default React.memo(NavMenu);
