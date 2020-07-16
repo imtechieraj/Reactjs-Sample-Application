@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import NavMenu from './components/header';
 import Cards from './components/cards';
 import Breadcrumbs from './components/Breadcrumbs';
@@ -16,7 +16,7 @@ class App extends React.Component {
       navMenuData: {
         "NavbarBrand": "angular-Bootstrap",
         "NavLink": [
-          'Home',
+          'home',
           'about',
           'blog',
           'contact',
@@ -103,15 +103,15 @@ class App extends React.Component {
       <div>
         {/* <Popup /> */}
         <div className="App">
-          <NavMenu navMenuData={this.state.navMenuData} />
+          {/* <NavMenu navMenuData={this.state.navMenuData} /> */}
           <button onClick={this.onClick}>Click me</button>
           {this.state.value}
           {this.state.cards ? <Cards data={this.state.cards} /> : <img src="https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif" />}
 
         </div>
         <h1>Fragments</h1>
-        {this.state.testArr.map((data) => {
-          return <Breadcrumbs></Breadcrumbs>
+        {this.state.testArr.map((data,i) => {
+          return <Breadcrumbs key={i}></Breadcrumbs>
         })}
 
         <Form>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavMenu = (props) => {
-    console.log("i am menu")
     const { NavLink, NavbarBrand } = props.navMenuData;
     return (
         <div>
@@ -12,7 +12,7 @@ const NavMenu = (props) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         {NavLink.map((item, i) => {
-                            return <Nav.Link href="#" key={i}>{item}</Nav.Link>
+                            return <Link to={"/" + item} key={i}>{item}</Link>
                         })}
                     </Nav>
                     <Form inline>
