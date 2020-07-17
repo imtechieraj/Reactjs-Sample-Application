@@ -3,6 +3,7 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const NavMenu = (props) => {
+    console.log("this is memo")
     const { NavLink, NavbarBrand } = props.navMenuData;
     return (
         <div>
@@ -26,3 +27,4 @@ const NavMenu = (props) => {
 }
 
 export default React.memo(NavMenu);
+// export default NavMenu;

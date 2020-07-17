@@ -14,6 +14,7 @@ class cards extends React.Component {
         const { data } = this.props;
         return (
             <div>
+                {/* List */}
                 {data.map((item, i) => {
                     return (
                         <Card style={{ width: '18rem' }} key={item.id}>

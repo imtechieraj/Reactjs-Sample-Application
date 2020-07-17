@@ -2,18 +2,22 @@ import React from "react";
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 import NavMenu from "./components/header";
+import LifeCycle from "./LifeCycle";
+import AjaxCall from "./AjaxCall";
+import ComVsPureCom from "./ComVsPureCom";
 import App from "./App";
+import Memo from "./Memo";
 
 const menuData = {
     "NavbarBrand": "angular-Bootstrap",
     "NavLink": [
-        'home',
-        'about',
-        'blog',
+        'lifeCycleMethod',
+        'AjaxCall',
+        'ComVsPureCom',
+        'Memo',
         'contact',
     ]
 };
@@ -26,17 +30,17 @@ export default function HomeRouter() {
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route exact path="/home">
-                        <App />
+                    <Route exact path="/lifeCycleMethod">
+                        <LifeCycle />
                     </Route>
-                    <Route exact path="/about">
-                        <About />
+                    <Route exact path="/AjaxCall">
+                        <AjaxCall />
                     </Route>
-                    <Route exact path="/blog">
-                        <Blog />
+                    <Route exact path="/ComVsPureCom">
+                        <ComVsPureCom />
                     </Route>
-                    <Route exact path="/contact">
-                        <Contact />
+                    <Route exact path="/Memo">
+                        <Memo />
                     </Route>
                     <Route exact path="/">
                         <App />
