@@ -10,6 +10,8 @@ import AjaxCall from "./AjaxCall";
 import ComVsPureCom from "./ComVsPureCom";
 import App from "./App";
 import Memo from "./Memo";
+import Fragments from "./Fragments";
+import PropTypesCom from "./PropTypes";
 
 const menuData = {
     "NavbarBrand": "angular-Bootstrap",
@@ -18,7 +20,8 @@ const menuData = {
         'AjaxCall',
         'ComVsPureCom',
         'Memo',
-        'contact',
+        'fragments',
+        'PropTypes',
     ]
 };
 
@@ -42,6 +45,12 @@ export default function HomeRouter() {
                     <Route exact path="/Memo">
                         <Memo />
                     </Route>
+                    <Route exact path="/fragments">
+                        <Fragments />
+                    </Route>
+                    <Route exact path="/PropTypes">
+                        <PropTypesCom />
+                    </Route>
                     <Route exact path="/">
                         <App />
                     </Route>
@@ -52,18 +61,6 @@ export default function HomeRouter() {
             </div>
         </Router>
     );
-}
-
-function Blog() {
-    return <h2>Blog page</h2>;
-}
-
-function About() {
-    return <h2>About</h2>;
-}
-
-function Contact() {
-    return <h2>Contact</h2>;
 }
 
 function NoMatch(){
