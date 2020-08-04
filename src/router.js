@@ -14,6 +14,9 @@ import Fragments from "./Fragments";
 import ErrorBoundary from "./ErrorBoundary";
 import PropTypesCom from "./PropTypes";
 import ReactRef from "./ReactRef";
+import HocExample from "./HocExample";
+import ChildToParent from "./childToParent";
+
 const menuData = {
     "NavbarBrand": "angular-Bootstrap",
     "NavLink": [
@@ -25,6 +28,8 @@ const menuData = {
         'PropTypes',
         'ReactRef',
         'ErrorBoundary',
+        'Hoc',
+        'childToParent'
     ]
 };
 
@@ -60,7 +65,12 @@ export default function HomeRouter() {
                     <Route exact path="/ErrorBoundary">
                         <ErrorBoundary/>
                     </Route>
-                    
+                    <Route exact path="/Hoc">
+                        <HocExample/>
+                    </Route>
+                    <Route exact path="/childToParent">
+                        <ChildToParent/>
+                    </Route>
                     <Route exact path="/">
                         <App />
                     </Route>
