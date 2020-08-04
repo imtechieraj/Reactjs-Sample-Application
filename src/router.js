@@ -11,8 +11,9 @@ import ComVsPureCom from "./ComVsPureCom";
 import App from "./App";
 import Memo from "./Memo";
 import Fragments from "./Fragments";
+import ErrorBoundary from "./ErrorBoundary";
 import PropTypesCom from "./PropTypes";
-
+import ReactRef from "./ReactRef";
 const menuData = {
     "NavbarBrand": "angular-Bootstrap",
     "NavLink": [
@@ -22,6 +23,8 @@ const menuData = {
         'Memo',
         'fragments',
         'PropTypes',
+        'ReactRef',
+        'ErrorBoundary',
     ]
 };
 
@@ -51,6 +54,13 @@ export default function HomeRouter() {
                     <Route exact path="/PropTypes">
                         <PropTypesCom />
                     </Route>
+                    <Route exact path="/ReactRef">
+                        <ReactRef />
+                    </Route>
+                    <Route exact path="/ErrorBoundary">
+                        <ErrorBoundary/>
+                    </Route>
+                    
                     <Route exact path="/">
                         <App />
                     </Route>
