@@ -16,9 +16,10 @@ import PropTypesCom from "./PropTypes";
 import ReactRef from "./ReactRef";
 import HocExample from "./HocExample";
 import ChildToParent from "./childToParent";
+import ReduxExample from "./ReduxExample";
 
 const menuData = {
-    "NavbarBrand": "angular-Bootstrap",
+    "NavbarBrand": "React-Bootstrap",
     "NavLink": [
         'lifeCycleMethod',
         'AjaxCall',
@@ -29,7 +30,8 @@ const menuData = {
         'ReactRef',
         'ErrorBoundary',
         'Hoc',
-        'childToParent'
+        'childToParent',
+        'Redux'
     ]
 };
 
@@ -63,13 +65,16 @@ export default function HomeRouter() {
                         <ReactRef />
                     </Route>
                     <Route exact path="/ErrorBoundary">
-                        <ErrorBoundary/>
+                        <ErrorBoundary />
                     </Route>
                     <Route exact path="/Hoc">
-                        <HocExample/>
+                        <HocExample />
                     </Route>
                     <Route exact path="/childToParent">
-                        <ChildToParent/>
+                        <ChildToParent />
+                    </Route>
+                    <Route exact path="/Redux">
+                        <ReduxExample />
                     </Route>
                     <Route exact path="/">
                         <App />
@@ -83,6 +88,6 @@ export default function HomeRouter() {
     );
 }
 
-function NoMatch(){
+function NoMatch() {
     return <h1>404 error</h1>
 }

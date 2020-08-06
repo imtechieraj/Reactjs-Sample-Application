@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Cards from './components/cards';
+import store, { Increment, Decrement } from "./Redux/store";
 
 class AjaxCall extends React.Component {
     //First Call Constructor
@@ -17,6 +18,8 @@ class AjaxCall extends React.Component {
     /* The componentDidMount() method runs after the component output has been rendered to the DOM.
         Correct place to call default API */
     componentDidMount() {
+        console.log(store.getState())
+
         fetch("https://jsonplaceholder.typicode.com/photos").then(res => res.json())
             .then(
                 (result) => {
