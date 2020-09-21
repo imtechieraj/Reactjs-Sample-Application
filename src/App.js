@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
-import NavMenu from './components/header';
+// import NavMenu from './components/header';
 import Cards from './components/cards';
 import Breadcrumbs from './components/Breadcrumbs';
 import { Form, Button } from 'react-bootstrap';
-
 class App extends React.Component {
   //First Call Constructor
   constructor() {
@@ -106,7 +105,7 @@ class App extends React.Component {
           {/* <NavMenu navMenuData={this.state.navMenuData} /> */}
           <button onClick={this.onClick}>Click me</button>
           {this.state.value}
-          {this.state.cards ? <Cards data={this.state.cards} /> : <img src="https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif" />}
+          {this.state.cards ? <Cards data={this.state.cards} /> : <img alt={``} src={`https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif`} />}
 
         </div>
         <h1>Fragments</h1>

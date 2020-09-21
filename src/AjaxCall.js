@@ -20,7 +20,7 @@ class AjaxCall extends React.Component {
     componentDidMount() {
         console.log(store.getState())
 
-        fetch("https://jsonplaceholder.typicode.com/photos").then(res => res.json())
+        fetch("https://jsonplaceholder.typicode.com/photos",).then(res => res.json())
             .then(
                 (result) => {
                     console.log(result.slice(0, 10))

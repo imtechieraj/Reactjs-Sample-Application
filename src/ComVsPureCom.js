@@ -1,7 +1,7 @@
 import React from 'react';
 
 // class ComVsPureCom extends React.Component {
-    class ComVsPureCom extends React.PureComponent {
+class ComVsPureCom extends React.PureComponent {
     //First Call Constructor
     constructor() {
         //1. We can use parent class method properties
@@ -17,7 +17,7 @@ import React from 'react';
         Correct place to call default API */
     componentDidMount() {
         setInterval(() => {
-            this.setState({value:"raj"})
+            this.setState({ value: "raj" })
         }, 1000)
     }
 

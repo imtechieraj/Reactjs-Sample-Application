@@ -17,6 +17,8 @@ import ReactRef from "./ReactRef";
 import HocExample from "./HocExample";
 import ChildToParent from "./childToParent";
 import ReduxExample from "./ReduxExample";
+import ReduxExample2 from "./ReduxExample2";
+// import hooksExample from "./components/hooksExample";
 
 const menuData = {
     "NavbarBrand": "React-Bootstrap",
@@ -31,7 +33,9 @@ const menuData = {
         'ErrorBoundary',
         'Hoc',
         'childToParent',
-        'Redux'
+        'Redux',
+        'Redux2',
+        'hooks'
     ]
 };
 
@@ -76,6 +80,11 @@ export default function HomeRouter() {
                     <Route exact path="/Redux">
                         <ReduxExample />
                     </Route>
+                    <Route exact path="/Redux2">
+                        <ReduxExample2 />
+                    </Route>
+                   
+                    
                     <Route exact path="/">
                         <App />
                     </Route>
